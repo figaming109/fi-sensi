@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#09090d" />
+<title>FI SENSI — Free Fire Sensitivity Generator</title>
+<style>
+:root{--bg:#08080c;--panel:#111117;--panel2:#17171f;--red:#ff303b;--red2:#ff5962;--text:#f5f5f7;--muted:#a3a3ad;--line:#292932;--green:#5ce0a0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 0%,#351015 0,transparent 28%),radial-gradient(circle at 0% 35%,#1d1016 0,transparent 26%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.wrap{width:min(1120px,92%);margin:auto}.topbar{height:76px;border-bottom:1px solid #ffffff12;background:#09090dcc;backdrop-filter:blur(14px);position:sticky;top:0;z-index:10}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.logo{font-size:24px;font-weight:950;letter-spacing:1.6px}.logo span{color:var(--red)}.navtag{font-size:12px;color:#d2d2d8;border:1px solid #ffffff20;padding:8px 12px;border-radius:999px;letter-spacing:1px}
+.hero{padding:66px 0 38px;text-align:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#ff858b;background:#ff303b16;border:1px solid #ff303b55;border-radius:999px;padding:7px 12px;font-size:11px;font-weight:800;letter-spacing:1.5px}.dot{width:7px;height:7px;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red)}h1{font-size:clamp(42px,8vw,76px);line-height:.98;letter-spacing:-3px;margin:20px 0 14px;font-weight:950}.hero h1 span{color:var(--red);text-shadow:0 0 32px #ff303b55}.hero p{color:var(--muted);max-width:620px;margin:0 auto;font-size:15px;line-height:1.7}.hero-actions{display:flex;justify-content:center;gap:12px;margin-top:26px;flex-wrap:wrap}.btn{border:0;border-radius:12px;padding:13px 19px;font-weight:850;cursor:pointer;transition:.2s;font-size:13px}.btn-primary{background:linear-gradient(135deg,var(--red),#d81427);color:white;box-shadow:0 9px 28px #ff303b30}.btn-secondary{background:#ffffff08;color:#eee;border:1px solid #ffffff20}.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px auto 40px;max-width:700px}.stat{background:#ffffff06;border:1px solid #ffffff12;border-radius:14px;padding:14px}.stat strong{display:block;font-size:19px}.stat small{color:var(--muted);font-size:11px}
+.main-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;margin-bottom:50px}.card{background:linear-gradient(145deg,#15151d,#101016);border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:0 18px 60px #0005}.card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.card h2{font-size:18px;margin:0;letter-spacing:-.3px}.step{font-size:10px;color:#ff858b;border:1px solid #ff303b50;padding:6px 9px;border-radius:8px;font-weight:900;letter-spacing:1px}.field{margin-bottom:16px}.field label{display:block;color:#d8d8df;font-size:12px;font-weight:750;margin-bottom:8px}.select, .text-input{width:100%;padding:13px 14px;background:#09090f;border:1px solid #33333d;border-radius:11px;color:white;outline:none;font-size:13px}.select:focus,.text-input:focus{border-color:var(--red);box-shadow:0 0 0 3px #ff303b18}.hint{font-size:11px;color:var(--muted);line-height:1.6;margin-top:8px}.full{width:100%;margin-top:5px}.result-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.result-top p{font-size:11px;color:var(--muted);margin:5px 0 0}.status{font-size:10px;color:var(--green);background:#5ce0a012;border:1px solid #5ce0a044;padding:6px 9px;border-radius:99px}.sens-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}.sens{background:#0b0b11;border:1px solid #292932;border-radius:12px;padding:13px}.sens span{display:block;color:var(--muted);font-size:11px}.sens strong{display:block;font-size:25px;margin-top:4px;letter-spacing:-1px}.sens strong em{font-style:normal;color:var(--red);font-size:11px;letter-spacing:0;margin-left:4px}.copy-row{display:flex;gap:9px;margin-top:14px}.copy-row .btn{flex:1}.section-title{text-align:center;margin:0 0 20px}.section-title h2{font-size:27px;margin:0 0 8px}.section-title p{color:var(--muted);font-size:13px;margin:0}.custom{margin-bottom:56px}.slider-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.slider-item{background:#0b0b11;border:1px solid #292932;padding:14px;border-radius:12px}.slider-label{display:flex;justify-content:space-between;font-size:12px;font-weight:750;margin-bottom:12px}.slider-label output{color:var(--red);font-weight:900}input[type=range]{width:100%;accent-color:var(--red);cursor:pointer}.custom-actions{display:flex;gap:10px;margin-top:15px;flex-wrap:wrap}.custom-actions .btn{flex:1}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:55px}.feature{padding:20px;background:#ffffff06;border:1px solid #ffffff12;border-radius:16px}.feature-icon{font-size:22px}.feature h3{font-size:14px;margin:12px 0 7px}.feature p{color:var(--muted);font-size:12px;line-height:1.6;margin:0}.notice{border:1px solid #ff303b35;background:#ff303b0c;padding:16px 18px;border-radius:13px;color:#c9c9d1;font-size:11px;line-height:1.7;margin-bottom:48px}.notice strong{color:#ff858b}footer{border-top:1px solid #ffffff12;padding:25px 0 35px;color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#202029;border:1px solid #ffffff25;color:white;padding:12px 16px;border-radius:10px;font-size:12px;opacity:0;pointer-events:none;transition:.25s;z-index:20}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){.hero{padding:48px 0 28px}.main-grid{grid-template-columns:1fr}.stats{margin-bottom:28px}.features{grid-template-columns:1fr}.card{padding:18px}.slider-list{grid-template-columns:1fr 1fr}}@media(max-width:420px){.slider-list{grid-template-columns:1fr}.stats{gap:7px}.stat{padding:11px 7px}.stat strong{font-size:16px}.stat small{font-size:9px}h1{letter-spacing:-2px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav"><div class="logo">FI <span>SENSI</span></div><div class="navtag">FREE FIRE SENSITIVITY TOOL</div></div></header>
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow"><i class="dot"></i> AIM • CUSTOMIZE • IMPROVE</div>
+  <h1>FIND YOUR <span>PERFECT</span><br>SENSITIVITY.</h1>
+  <p>Build a sensitivity starting point for your device, then fine-tune every setting to match your own gameplay.</p>
+  <div class="hero-actions"><button class="btn btn-primary" onclick="document.getElementById('generator').scrollIntoView({behavior:'smooth'})">GENERATE SENSITIVITY ↘</button><button class="btn btn-secondary" onclick="document.getElementById('custom').scrollIntoView({behavior:'smooth'})">CUSTOM SETTINGS</button></div>
+  <div class="stats"><div class="stat"><strong>6</strong><small>SENSITIVITY SETTINGS</small></div><div class="stat"><strong>100%</strong><small>CUSTOMIZABLE</small></div><div class="stat"><strong>FREE</strong><small>ALWAYS FREE TO USE</small></div></div>
+</section>
+<section class="main-grid" id="generator">
+  <div class="card">
+    <div class="card-head"><h2>Device Setup</h2><span class="step">STEP 01</span></div>
+    <div class="field"><label for="brand">PHONE BRAND</label><select class="select" id="brand"><option value="Other">Select brand</option><option>Redmi / Xiaomi</option><option>Samsung</option><option>Realme</option><option>OPPO</option><option>Vivo</option><option>Infinix</option><option>TECNO</option><option>iPhone</option><option>OnePlus</option><option>Other</option></select></div>
+    <div class="field"><label for="model">PHONE MODEL</label><input class="text-input" id="model" placeholder="e.g. Redmi Note 15 Pro 5G" /></div>
+    <div class="field"><label for="playstyle">YOUR PLAY STYLE</label><select class="select" id="playstyle"><option value="balanced">Balanced</option><option value="rush">Rusher / Close range</option><option value="long">Long range</option><option value="drag">Drag headshot</option></select></div>
+    <div class="field"><label for="range">SENSITIVITY RANGE</label><select class="select" id="range"><option value="200">0–200 (Newer scale)</option><option value="100">0–100 (Classic scale)</option></select></div>
+    <p class="hint">Your device model helps label your profile. The generated values are a starting preset—not a guaranteed best setting.</p>
+    <button class="btn btn-primary full" onclick="generate()">GENERATE MY SENSI ✦</button>
+  </div>
+  <div class="card">
+    <div class="card-head"><h2>Your Sensitivity</h2><span class="step">STEP 02</span></div>
+    <div class="result-top"><div><strong id="resultTitle">FI SENSI PRESET</strong><p id="deviceLine">Choose your device to get started</p></div><span class="status">● READY</span></div>
+    <div class="sens-list" id="results">
+      <div class="sens"><span>General</span><strong>--</strong></div><div class="sens"><span>Red Dot</span><strong>--</strong></div><div class="sens"><span>2× Scope</span><strong>--</strong></div><div class="sens"><span>4× Scope</span><strong>--</strong></div><div class="sens"><span>Sniper Scope</span><strong>--</strong></div><div class="sens"><span>Free Look</span><strong>--</strong></div>
+    </div>
+    <div class="copy-row"><button class="btn btn-primary" onclick="copyPreset()">COPY ALL SETTINGS</button><button class="btn btn-secondary" onclick="resetPreset()">RESET</button></div>
+    <p class="hint">Try the preset in Training Mode and adjust gradually until it feels comfortable.</p>
+  </div>
+</section>
+<section class="custom" id="custom">
+  <div class="section-title"><h2>Custom Sensitivity</h2><p>Fine-tune your own values from 0 to 200.</p></div>
+  <div class="card">
+    <div class="slider-list" id="sliders"></div>
+    <div class="custom-actions"><button class="btn btn-primary" onclick="copyCustom()">COPY CUSTOM SENSI</button><button class="btn btn-secondary" onclick="resetCustom()">RESET SLIDERS</button></div>
+  </div>
+</section>
+<section class="features">
+  <article class="feature"><div class="feature-icon">📱</div><h3>Device-based setup</h3><p>Select your phone brand and add your model to create a labeled preset for your device.</p></article>
+  <article class="feature"><div class="feature-icon">🎯</div><h3>Play-style presets</h3><p>Choose balanced, rush, long-range, or drag-headshot as a starting point.</p></article>
+  <article class="feature"><div class="feature-icon">⚡</div><h3>Quick copy</h3><p>Copy all six sensitivity values in one tap and keep them ready while you configure your game.</p></article>
+</section>
+<div class="notice"><strong>PLEASE NOTE:</strong> FI SENSI is an independent fan-made tool and is not affiliated with or endorsed by Garena. Sensitivity is personal and can vary with device performance, screen size, controls, and game updates. These values are suggested starting points; test and adjust them in-game. This tool does not access or modify your Free Fire account.</div>
+</main>
+<footer><div class="wrap foot"><span class="logo">FI <span>SENSI</span></span><span>Made for players. Tune it your way. © 2026 FI SENSI</span></div></footer>
+<div class="toast" id="toast">Copied!</div>
+<script>
+const names=["General","Red Dot","2× Scope","4× Scope","Sniper Scope","Free Look"];
+const base={balanced:[185,175,165,150,85,140],rush:[195,188,178,165,92,150],long:[170,160,150,135,75,125],drag:[192,182,170,155,88,145]};
+let current=[...base.balanced], custom=[...base.balanced];
+function clamp(n,min,max){return Math.max(min,Math.min(max,n))}
+function scaleValues(vals,max){return max===100?vals.map(v=>Math.round(v/2)):vals}
+function generate(){
+ const brand=document.getElementById('brand').value, model=document.getElementById('model').value.trim(), style=document.getElementById('playstyle').value, max=+document.getElementById('range').value;
+ let vals=[...base[style]];
+ // A small, transparent variation based on the selected device family; model names are not treated as verified hardware specs.
+ const factor=brand==='iPhone'?1:brand==='Samsung'?-.02:brand==='Redmi / Xiaomi'?.01:0;
+ vals=vals.map((v,i)=>clamp(Math.round(v+(v-120)*factor),0,200));
+ current=scaleValues(vals,max); custom=[...current];
+ document.getElementById('resultTitle').textContent=style.toUpperCase()+' PRESET';
+ document.getElementById('deviceLine').textContent=(model||brand==='Other'?'Your device':brand+' '+model)+' · '+max+' scale';
+ renderResults(); renderSliders(max);
+}
+function renderResults(){document.getElementById('results').innerHTML=names.map((n,i)=>`<div class="sens"><span>${n}</span><strong>${current[i]}</strong></div>`).join('')}
+function renderSliders(max=200){document.getElementById('sliders').innerHTML=names.map((n,i)=>`<div class="slider-item"><div class="slider-label"><label for="s${i}">${n}</label><output id="v${i}">${custom[i]}</output></div><input id="s${i}" type="range" min="0" max="${max}" value="${custom[i]}" oninput="updateSlider(${i},this.value)"></div>`).join('')}
+function updateSlider(i,v){custom[i]=+v;document.getElementById('v'+i).value=v}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
+function copyText(text){if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(()=>toast('Settings copied!')).catch(()=>fallbackCopy(text))}else fallbackCopy(text)}
+function fallbackCopy(text){const el=document.createElement('textarea');el.value=text;document.body.appendChild(el);el.select();try{document.execCommand('copy');toast('Settings copied!')}catch(e){toast('Copy not available in this browser')}el.remove()}
+function copyPreset(){copyText('FI SENSI\\n'+names.map((n,i)=>n+': '+current[i]).join('\\n'))}
+function copyCustom(){copyText('FI SENSI CUSTOM\\n'+names.map((n,i)=>n+': '+custom[i]).join('\\n'))}
+function resetPreset(){current=[...base.balanced];if(+document.getElementById('range').value===100)current=scaleValues(current,100);renderResults();toast('Preset reset')}
+function resetCustom(){custom=[...current];renderSliders(+document.getElementById('range').value);toast('Custom values reset')}
+renderResults();renderSliders();
+</script>
+</body>
+</html>
